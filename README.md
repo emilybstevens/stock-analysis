@@ -1,9 +1,9 @@
 # VBA of Wall Street
 Utilizing VBA to analyze stock market data for trends
 ## Overview of Project
-* What is VBA?
+VBA is a programming language used for Excel and other Microsoft programs. 
 ### Purpose
-* What is the purpose of this project? 
+The purpose of this project is to provide the client with a convenient way to analyze stock market data to assist in data-driven market decisions. 
 ## Results
 * What are the results of our analysis? 
 * Did refactoring the code make a difference in analysis speed? 
