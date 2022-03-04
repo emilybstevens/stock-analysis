@@ -1,9 +1,11 @@
 # VBA of Wall Street
 Utilizing VBA to analyze stock market data for trends
+
 ## Overview of Project
 VBA is a programming language used for Excel and other Microsoft programs. 
 ### Purpose
 The purpose of this project is to provide the client with a convenient way to analyze stock market data to assist in data-driven market decisions. 
+
 ## Results
 ### Results of Stock Analysis
 Overall, stocks generally did better in 2017 than they did in 2018, with a larger percentage of stocks resulting in a positive return. </br></br>
@@ -16,8 +18,36 @@ Refactoring the code produced the same information at greater speeds. Listed spe
 * speed of original code (2017): 0.78125 s
 * speed of original code (2018): 0.796875 s
 * speed of refactored code (2017): 0.1171875 s
-* speed of refactored code (2018): 0.1210938 s
-Would this be applicable for the purpose Steve has requested? 
+* speed of refactored code (2018): 0.1210938 s </br></br>
+The refactored code was written to provide the client with a program that can efficiently analyze larger data sets with ease. The original code required three separate passes through the data in order to obtain all values needed, while the refactored code only required one pass. This saves time and processing power. </br></br>
+The loop in the original code was written as such:</br></br>
+`    For i = 0 To 11
+        ticker = tickers(i)
+        totalVolume = 0
+        
+            Worksheets(yearValue).Activate
+            For j = 2 To RowCount
+                
+                If Cells(j, 1).Value = ticker Then
+                    totalVolume = totalVolume + Cells(j, 8).Value
+                End If
+                
+                If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+                    startingPrice = Cells(j, 6).Value
+                End If
+                
+                If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+                    endingPrice = Cells(j, 6).Value
+                End If
+            
+            Next j
+
+        Worksheets("All Stocks Analysis").Activate
+        Cells(4 + i, 1).Value = ticker
+        Cells(4 + i, 2).Value = totalVolume
+        Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
+    Next i`
+
 ## Summary
 * What are the advantages of refactoring code? 
 * What are the disadvantages of refacotring code? 
