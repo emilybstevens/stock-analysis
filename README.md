@@ -20,7 +20,7 @@ Refactoring the code produced the same information at greater speeds. Listed spe
 * speed of refactored code (2017): 0.1171875 s
 * speed of refactored code (2018): 0.1210938 s </br></br>
 The refactored code was written to provide the client with a program that can efficiently analyze larger data sets with ease. The original code required three separate passes through the data in order to obtain all values needed, while the refactored code only required one pass. This saves time and processing power. </br></br>
-The loop in the original code was written as such:</br></br>
+The loop in the original code was written as such:</br>
 ```
     For i = 0 To 11
         ticker = tickers(i)
@@ -49,7 +49,36 @@ The loop in the original code was written as such:</br></br>
         Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
     Next i
 ```
+While the loop in the refactored code was written: 
+```
+    For i = 2 To RowCount
 
+        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+        
+        If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+            tickerStartingPrice(tickerIndex) = Cells(i, 6).Value
+        End If
+        
+        If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+            tickerEndingPrice(tickerIndex) = Cells(i, 6).Value
+        End If
+        
+        If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+            tickerIndex = tickerIndex + 1
+        End If
+            
+    Next i
+
+    Worksheets("All Stocks Analysis").Activate
+    For i = 0 To 11
+    
+    Cells(4 + i, 1).Value = tickers(i)
+    Cells(4 + i, 2).Value = tickerVolumes(i)
+    Cells(4 + i, 3).Value = tickerEndingPrice(i) / tickerStartingPrice(i) - 1
+
+    Next i
+```
+By refactoring the code, the process of looping through the data was simplified. 
 ## Summary
 * What are the advantages of refactoring code? 
 * What are the disadvantages of refacotring code? 
