@@ -78,7 +78,7 @@ While the loop in the refactored code was written:
 
     Next i
 ```
-By refactoring the code, the process of looping through the data was simplified. 
+By refactoring the code, the process of looping through the data was simplified, and the total run time was shortened. This will allow the code to run on larger data sets without causing too much strain on the computer or on the client's time. 
 ## Summary
 * What are the advantages of refactoring code? 
 * What are the disadvantages of refacotring code? 
