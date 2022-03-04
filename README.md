@@ -21,7 +21,8 @@ Refactoring the code produced the same information at greater speeds. Listed spe
 * speed of refactored code (2018): 0.1210938 s </br></br>
 The refactored code was written to provide the client with a program that can efficiently analyze larger data sets with ease. The original code required three separate passes through the data in order to obtain all values needed, while the refactored code only required one pass. This saves time and processing power. </br></br>
 The loop in the original code was written as such:</br></br>
-`    For i = 0 To 11
+`
+    For i = 0 To 11
         ticker = tickers(i)
         totalVolume = 0
         
@@ -46,7 +47,8 @@ The loop in the original code was written as such:</br></br>
         Cells(4 + i, 1).Value = ticker
         Cells(4 + i, 2).Value = totalVolume
         Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
-    Next i`
+    Next i
+`
 
 ## Summary
 * What are the advantages of refactoring code? 
