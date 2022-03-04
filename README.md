@@ -5,15 +5,16 @@ VBA is a programming language used for Excel and other Microsoft programs.
 ### Purpose
 The purpose of this project is to provide the client with a convenient way to analyze stock market data to assist in data-driven market decisions. 
 ## Results
-### Results of Stock Analysis* What are the results of our analysis? 
+### Results of Stock Analysis
 Overall, stocks generally did better in 2017 than they did in 2018, with a larger percentage of stocks resulting in a positive return. </br>
-![Analysis of 2018 Stock Returns](resources/2018_refactored.png)
 ![Analysis of 2017 Stock Returns](resources/2017_refactored.png)
+![Analysis of 2018 Stock Returns](resources/2018_refactored.png)
 ### Results of Refactoring Code
------>speed of original code (2017): 0.78125 s
------>speed of original code (2018): 0.796875 s
------>speed of refactored code (2017): 0.1171875 s
------>speed of refactored code (2018): 0.1210938 s
+Refactoring the code produced the same information at greater speeds. Listed speeds for both original and refactored code are as follows:
+* speed of original code (2017): 0.78125 s
+* speed of original code (2018): 0.796875 s
+* speed of refactored code (2017): 0.1171875 s
+* speed of refactored code (2018): 0.1210938 s
 * Would this be applicable for the purpose Steve has requested? 
 ## Summary
 * What are the advantages of refactoring code? 
