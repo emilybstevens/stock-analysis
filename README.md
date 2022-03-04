@@ -2,7 +2,7 @@
 Utilizing VBA to analyze stock market data for trends
 
 ## Overview of Project
-VBA is a programming language used for Excel and other Microsoft programs. 
+VBA is a programming language used for Excel and other Microsoft programs. It provides a way to automate Excel spreadsheets to analyze large data sets. 
 ### Purpose
 The purpose of this project is to provide the client with a convenient way to analyze stock market data to assist in data-driven market decisions. 
 
