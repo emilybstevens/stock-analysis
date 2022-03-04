@@ -14,7 +14,7 @@ Overall, stocks generally did better in 2017 than they did in 2018, with a large
 As the client's parents are invested in the stock DAQO ("DQ" for short), it should be noted that DQ had a very poor return in 2018, even when compared against all the poor stock returns for the same year. While the majority of stocks analyzed had negative returns, only two of them had a negative return larger than -60%. In 2017, on the other hand, DQ had a very successful year when compared against other stock returns. With a return of +199.4% in 2017 and a return of -62.6% in 2018, DQ has proven to be a particularly volatile stock. </br></br>
 If the client's parents prefer to work with a volatile stock, DQ would be a good option. If they would prefer something more stable, DQ would not be a good option. Instead, ENPH might prove more to their taste, with a return of +129.5% (2017) and +81.9% (2018).  
 ### Results of Refactoring Code
-Refactoring the code produced the same information at greater speeds. The original code returned results for the year 2017 in 0.78125 seconds, while the refactored code returned results in 0.1523438 seconds. Similarly, the original code for the year 2018 returned results in 0.796875 seconds, while the refactored code returned results in 0.1289063 seconds. </br>
+Refactoring the code produced the same information at greater speeds. The original code returned results for the year 2017 in 0.78125 seconds, while the refactored code returned results in 0.1523438 seconds. Similarly, the original code for the year 2018 returned results in 0.796875 seconds, while the refactored code returned results in 0.1289063 seconds. </br> 
 #### Refactored Code Run Times
 ![Return Speed 2017 Refactored](resources/VBA_Challenge_2017.png)
 ![Return Speed 2018 Refactored](resources/VBA_Challenge_2018.png)</br>
@@ -78,11 +78,8 @@ While the loop in the refactored code was written:
 
     Next i
 ```
-By refactoring the code, the process of looping through the data was simplified, and the total run time was shortened. This will allow the code to run on larger data sets without causing too much strain on the computer or on the client's time. 
+By refactoring the code in this manner, the process of looping through the data was simplified, and the total run time was shortened. This will allow the code to run on larger data sets without causing too much strain on the computer or on the client's time. 
 ## Summary
-* What are the advantages of refactoring code? 
-* What are the disadvantages of refacotring code? 
-* What are the advantages of the original VBA script? 
-* What are the disadvantages of the original VBA script? 
-* What are the advantages of the refactored script?
-* What are the disadvantages of the refacotred script?  
+By refactoring the code, the process of running the code can be simplified and the run time reduced. Unfortunately, the process of refactoring the code can be difficult and confusing if the coder does not fully understand the parts of the code they've written. </br></br>
+On the other hand, the original script without the refactoring could be considered "easier" to write, since there's less confusion over referencing indexes. Still, the original code is slow and puts more strain on the computer, since it has to run through the loop a few times to retrieve all of the necessary data. This means that on larger data sets, the non-refactored code would not be the most convenient option for a client to use. </br></br>
+In general, refactoring code would provide a more versatile tool for clients who may not have coding skills or the necessary knowledge to rework the non-refactored code themselves for other data sets. When a code is refactored, it can become more efficient and can be scaled to much larger projects without strain. This means that in the future, a coder will have significantly less work on their hands if they need to work on different data than originally provided. 
